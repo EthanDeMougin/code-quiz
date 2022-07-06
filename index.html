@@ -42,9 +42,21 @@
                 <button class="answer-choice" id="answer4"></button>
             </div>
             <div class="end-of-game">
-                <p class="final-score"></p>
+                <div>
+                    <p class="final-score"></p>
+                </div>
+                <div>
+                    <form action="highscore.html" class="initial-form">
+                        Enter you initials: <input type="text" name="initials" id="user_initials">
+                        <br>
+                        <br>
+                        <input type="submit" class="submit" onclick="resetGame()">
+                    </form>
+                </div>
             </div>
-            
+            <div class="result-block">
+                <p class="result"></p>
+            </div>
         </section>
     </main>
 
