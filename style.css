@@ -1,0 +1,131 @@
+:root {
+    --white: white;
+    --red: rgb(185, 98, 98);
+    --green: rgb(114, 199, 114);
+}
+
+body {
+    background-color: var(--white);
+}
+
+.time {
+    padding-left: 50%;
+}
+
+.info-bar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-bar div {
+    font-size: 40px;
+}
+
+.instructions h1, 
+.instructions p {
+    display: flex;
+    justify-content: center;
+}
+
+.instruction-box {
+    line-height: 100%;
+    padding-top: 25px;
+}
+
+.instructions h1 {
+    font-size: 50px;
+}
+
+.instructions p {
+    font-size: 25px;
+}
+
+.instruction-box {
+    padding-bottom: 10%;
+    font-size: 25px;
+}
+
+.button-control {
+    display: flex;
+    justify-content: center;
+}
+
+.button-control button {
+    background-color: var(--red);
+    padding: 15px 35px;
+    border: 0px;
+    font-size: 25px;
+}
+
+.button-control button:active {
+    transform : translateY(5px);
+}
+
+.button-control button: hover {
+    opacity: 100%;
+}
+
+.button-control button:active:after {
+    background-color: var(--red);
+    padding: 15px 35px;
+    border: 0px;
+    font-size: 25px;
+}
+
+.break {
+    height: 0px;
+    flex-basis: 100%;
+}
+
+.question-block {
+    display: flex;
+    justify-content: center;
+}
+
+.question {
+    font-size: 35px;
+}
+
+.questions {
+    padding-top: 150px;
+}
+
+.choices,
+.answer-choices {
+    display: none;
+    margin: auto;
+    width: 50%;
+}
+
+.choices {
+    border-bottom: 1px solid;
+}
+
+.answer-choice {
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    display: block;
+    font-size: 25px;
+    width: 80%;
+    padding: 10px 24px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.answer-choice:last-child {
+    margin-bottom: 50px;
+}
+
+.answer-choice:hover {
+    background-color: var(--green);
+}
+
+.result {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.end-game {
+    display: none;
+}
