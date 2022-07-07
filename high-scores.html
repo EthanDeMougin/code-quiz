@@ -31,3 +31,22 @@
     </main>
 </body>
 
+<script>
+    var score_list = document.querySelector(".score-list");
+    var clearClick = document.querySelector("#clearScores");
+
+    for (var i = 0; i < localStorage.length; i ++) {
+        if (localStorage.key(i) != "highScore") {
+            var item = document.createElement("li");
+            item.textContent = localStorage.key(i) + " - " + localStorage.getItem(localStorage.key(i));
+            score_list.appendChild(item);
+        }
+    }
+
+    clearClick.addEventListener("click", function () {
+        localStorage.clear();
+        location.reload();
+    })
+</script>
+
+</html>
