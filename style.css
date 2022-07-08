@@ -2,14 +2,12 @@
     --white: white;
     --red: rgb(185, 98, 98);
     --green: rgb(114, 199, 114);
+    --gray: rgb(53, 53, 53);
+    --lavender: rgb(179, 179, 230);
 }
 
 body {
     background-color: var(--white);
-}
-
-.time {
-    padding-left: 50%;
 }
 
 .info-bar {
@@ -18,18 +16,24 @@ body {
 }
 
 .info-bar div {
-    font-size: 40px;
+    font-size: 35px;
 }
 
-.instructions h1, 
-.instructions p {
+.time {
+    padding-left: 50%;
+}
+
+.instructions h1,
+.instructions p,
+.button-control,
+.question-block {
     display: flex;
     justify-content: center;
 }
 
 .instruction-box {
+    padding-top: 20px;
     line-height: 100%;
-    padding-top: 25px;
 }
 
 .instructions h1 {
@@ -41,45 +45,36 @@ body {
 }
 
 .instruction-box {
-    padding-bottom: 10%;
     font-size: 25px;
-}
-
-.button-control {
-    display: flex;
-    justify-content: center;
+    padding-bottom: 10%;
 }
 
 .button-control button {
-    background-color: var(--red);
-    padding: 15px 35px;
-    border: 0px;
+    opacity: 100%;
+    background-color: var(--green);
+    padding: 15px 32px;
     font-size: 25px;
 }
 
-.button-control button:active {
-    transform : translateY(5px);
-}
-
-.button-control button: hover {
+.button-control button:hover {
     opacity: 100%;
 }
 
+.button-control button:active {
+    box-shadow: 0 5px var(--gray);
+    transform: translateY(4px);
+}
+
 .button-control button:active:after {
-    background-color: var(--red);
-    padding: 15px 35px;
-    border: 0px;
+    opacity: 100%;
+    background-color: var(--green);
+    padding: 15px 32px;
     font-size: 25px;
 }
 
 .break {
-    height: 0px;
     flex-basis: 100%;
-}
-
-.question-block {
-    display: flex;
-    justify-content: center;
+    height: 0;
 }
 
 .question {
@@ -91,7 +86,7 @@ body {
 }
 
 .choices,
-.answer-choices {
+.answer-choice {
     display: none;
     margin: auto;
     width: 50%;
@@ -104,28 +99,92 @@ body {
 .answer-choice {
     background-color: var(--green);
     border: 1px solid var(--green);
-    display: block;
     font-size: 25px;
-    width: 80%;
     padding: 10px 24px;
-    margin-bottom: 10px;
     cursor: pointer;
-}
-
-.answer-choice:last-child {
-    margin-bottom: 50px;
+    width: 80%;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .answer-choice:hover {
     background-color: var(--green);
 }
 
+.answer-choice:last-child {
+    margin-bottom: 50px;
+}
+
 .result {
     margin-top: 50px;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .end-of-game {
     display: none;
 }
+
+
+.final-score,
+.initial-form {
+    text-align: center;
+    font-size: 50px;
+}
+
+.initial-form input {
+    font-size: 50px;
+    line-height: 10px;
+    width: 200px;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.submit {
+    background-color: var(--lavender);
+    margin-top: 15px;
+    padding: 10px 0px;
+}
+
+input.submit {
+    font-size: 25px;
+}
+
+.submit:hover {
+    background-color: var(--green);
+}
+
+.scores {
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+
+.scores h1 {
+    font-size: 40px;
+}
+
+.score-list {
+    font-size: 35px;
+    width: 25%;
+    margin: 0 auto;
+}
+
+.clear-high-scores {
+    display: flex;
+    margin: 0 auto;
+}
+
+.clear-high-scores button {
+    background-color: var(--lavender);
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.clear-high-scores button:hover {
+    background-color: var(--green);
+}  

@@ -3,30 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="Width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Javascript Code Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals Quiz</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-
     <header class="info-bar">
-        <div class="high-scores"><a href="highscores.html">View High Scores</a></div>
+        <div class="high-scores"><a href="high-scores.html">View High Scores</a></div>
         <div class="timer">Time: <span id="time">60</span></div>
     </header>
-    
+
     <section class="instructions">
-        <div class="instructions-box">
-            <h1>Challenge: Code Quiz</h1>
-            <p>Answer the following questions, you have one minute!</p>
-            <p>Answering a question incorrectly will result in losing some of your time!</p>
-            <p>Your final score will be the remaining time.</p>
+        <div class="instruction-box">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try and answer the following questions within one minute!</p>
+            <p>You will be penalized ten seconds for incorrect answers.</p>
+            <p>Your final score will be the time remaining.</p>
         </div>
         <div class="button-control">
-            <button type="button" id="beginButton">Let's Start!</button>
-
+            <button type="button" id="beginButton">Let's begin!</button>
         </div>
-
     </section>
 
     <main>
@@ -41,13 +38,13 @@
                 <button class="answer-choice" id="answer3"></button>
                 <button class="answer-choice" id="answer4"></button>
             </div>
-            <div class="end-game">
+            <div class="end-of-game">
                 <div>
                     <p class="final-score"></p>
                 </div>
                 <div>
-                    <form action="highscore.html" class="initial-form">
-                        Enter you initials: <input type="text" name="initials" id="user_initials">
+                    <form action="highscores.html" class="initial-form">
+                        Enter your initials: <input type="text" name="initials" id="user_initials">
                         <br>
                         <br>
                         <input type="submit" class="submit" onclick="resetGame()">
@@ -60,6 +57,7 @@
         </section>
     </main>
 
+    <script src="./script.js"></script>
 </body>
 
 </html>
